@@ -13,9 +13,6 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private int newLevelCount = 5;
     private GameObject[] _enemy;
 
-    private float width = 20f;
-    private float height = 16f;
-
     private void Awake()
     {
         for (int i = 1; i <= count; i++)
@@ -39,11 +36,22 @@ public class WaveSpawner : MonoBehaviour
     {
         float posX = 0f;
         float posY = 0f;
-        //while ((posX >= -10) && (posX <= 10))
+        
+        List<float> size = new List<float>() {0.04f, 0.08f, 0.16f};
+
+        while ( ((posX >= -10) && (posX <= 10) ) && ( (posY >= -6) && (posY <= 6) ) )
+        {
             posX = Random.Range(-12f, 12f);
-        while ((posY >= -6) && (posY <= 6)) posY = Random.Range(-8f, 8f);
+            posY = Random.Range(-8f, 8f);
+        }
+
+        int level = (int)Random.Range(0, 5);
+        Debug.Log(level);
+        enemy.GetComponent<Enemy>().speed = 6 - (1.2f * level);
+        enemy.GetComponent<Transform>().localScale = new Vector3(0.04f + (0.04f * level) , 0.04f + (0.04f * level), 0.04f + (0.04f * level));
 
         Vector3 pos = new Vector3(posX, posY, -1);
         Instantiate(enemy, pos, Quaternion.identity);
+        
     }
 }

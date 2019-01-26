@@ -8,6 +8,7 @@ public class Fountain : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private LoseMenu loseMenu;
     private int score = 0;
+    
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class Fountain : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
-            Destroy(col.gameObject);
+            col.gameObject.GetComponent<Enemy>().alive = false;
             score += 1;
             scoreText.text = score.ToString();
         }

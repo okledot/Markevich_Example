@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\vasma\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\vasma\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Markevich_Example.-437943027.00" t="ExcludeRecursive" />
-    <e p="D:\Unity\UnityProjects\EntityComponentSystemSamples-master\Markevich_Example" t="IncludeRecursive">
+    <e p="C:\Users\vasma\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Markevich_Example.1411486810.00" t="ExcludeRecursive" />
+    <e p="D:\Unity\UnityProjects\Markevich_Example" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
